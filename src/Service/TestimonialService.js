@@ -1,8 +1,11 @@
-import TestimonialRepository from "../repositories/testimonial.repository.js";
+import TestimonialRepository from "../Repository/TestimonialRepository.js";
 
 const TestimonialService = {
-  getAll: () => {
+  findAll: () => {
     return TestimonialRepository.findAll();
+  },
+  findAllByUser: (userId) => {
+    return TestimonialRepository.findAllByUser(userId);
   },
 };
 
